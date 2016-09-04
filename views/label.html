@@ -1,0 +1,35 @@
+{% extends 'layout.tpl.html' %}
+
+{% block content %}
+  <header>
+    <button class="header-button" id="import">Import</button>
+    <button class="header-button" id="export">Export</button>
+    <a class="header-link" href="/label/root"><img class="logo" src="/images/logo.png" /></a>
+  </header>
+  <div id="contents">
+    {% if current %}
+      <h2><a href="/label/root">Top level</a></h2>
+      <h2>Label: {{current.name}}</h2>
+      {% if current.parent %}
+        <a href="/label/{{current.parent_id}}">Parent: {{current.parent.name}}</a>
+      {% else %}
+        <a href="/label/root">Parent: Top level</a>
+      {% endif %}
+    {% else %}
+      <h2>Top level</h2>
+    {% endif %}
+    <h3>Children ({{children.length}})</h3>
+    <ul>
+      {% for child in children %}
+        <li><a href="/label/{{child.id}}">{{child.name}}</a></li>
+      {% endfor %}
+    </ul>
+    <h3>Assets({{assets.length}})</h3>
+    <ul>
+      {% for asset in assets %}
+        <li>{{asset.name}} : {{asset.total_plays}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <script src="/scripts/index.js"></script>
+{% endblock %}
