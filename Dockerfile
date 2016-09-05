@@ -7,4 +7,4 @@ COPY package.json /usr/src/app/
 RUN npm install
 COPY . /usr/src/app
 
-ENTRYPOINT ["node", "cli.js"]
+ENTRYPOINT ["forever", "index.js"]
