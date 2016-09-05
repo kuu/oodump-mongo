@@ -1,6 +1,6 @@
 {
   "name": "oodump-webapp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A web site for viewing/dumping Ooyala v2 analytics data per label/asset",
   "main": "index.js",
   "scripts": {
