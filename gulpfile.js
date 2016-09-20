@@ -169,7 +169,7 @@ gulp.task('watch', ['build'], () => {
         browserSync.init({
           notify: false,
           port: 9000,
-          proxy: 'localhost:3000',
+          proxy: 'localhost:4000',
           serveStatic: ['dist']
         }, () => {});
       }

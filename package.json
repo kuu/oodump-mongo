@@ -9,6 +9,8 @@
     "build": "gulp build",
     "buildAll": "gulp",
     "start": "forever start index.js",
+    "memcheck": "node-debug index.js",
+    "start-fg": "forever index.js",
     "stop": "forever stop index.js",
     "logs": "forever logs index.js",
     "debug": "node-debug index.js --debug-brk",
@@ -66,7 +68,7 @@
     "forever": "^0.15.2",
     "mongodb": "^2.2.9",
     "morgan": "^1.7.0",
-    "ooyala-api": "^0.2.4",
+    "ooyala-api": "^0.4.3",
     "serve-favicon": "^2.3.0",
     "swig": "^1.4.2"
   },
